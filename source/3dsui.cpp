@@ -70,7 +70,7 @@ uint8 *fontWidth;
 void ui3dsUpdateScreenSettings(gfxScreen_t gameScreen) {
 	screenSettings.GameScreen = gameScreen;
 	screenSettings.SecondScreen = (screenSettings.GameScreen == GFX_TOP) ? GFX_BOTTOM : GFX_TOP;
-	screenSettings.GameScreenWidth  = (screenSettings.GameScreen == GFX_TOP) ? SCREEN_TOP_WIDTH : SCREEN_BOTTOM_WIDTH;
+	screenSettings.GameScreenWidth  = (screenSettings.GameScreen == GFX_TOP) ? SCREEN_TOP_WIDTH_WIDE : SCREEN_BOTTOM_WIDTH;
     screenSettings.SecondScreenWidth  = (screenSettings.SecondScreen == GFX_TOP) ? SCREEN_TOP_WIDTH : SCREEN_BOTTOM_WIDTH;
     
     // for second screen rom info

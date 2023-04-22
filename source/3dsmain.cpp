@@ -726,31 +726,31 @@ bool settingsUpdateAllSettings(bool updateGameSettings = true)
 
     if (settings3DS.ScreenStretch == 0) // No Stretch / Pixel Perfect
     {
-        settings3DS.StretchWidth = 256;
+        settings3DS.StretchWidth = 256  * 2;
         settings3DS.StretchHeight = -1;    
         settings3DS.CropPixels = 0;
     }
     else if (settings3DS.ScreenStretch == 1) // 4:3 Fit
     {
-        settings3DS.StretchWidth = 320;
+        settings3DS.StretchWidth = 320  * 2;
         settings3DS.StretchHeight = SCREEN_HEIGHT;
         settings3DS.CropPixels = 0;
     }
     else if (settings3DS.ScreenStretch == 2) // Fullscreen
     {
-        settings3DS.StretchWidth = screenSettings.GameScreenWidth;
+        settings3DS.StretchWidth = screenSettings.GameScreenWidth  * 2;
         settings3DS.StretchHeight = SCREEN_HEIGHT;
         settings3DS.CropPixels = 0;
     }
     else if (settings3DS.ScreenStretch == 3) // Cropped 4:3 Fit
     {
-        settings3DS.StretchWidth = 320;
+        settings3DS.StretchWidth = 320  * 2;
         settings3DS.StretchHeight = SCREEN_HEIGHT;
         settings3DS.CropPixels = 8;
     }
     else if (settings3DS.ScreenStretch == 4) // Cropeed Fullscreen
     {
-        settings3DS.StretchWidth = screenSettings.GameScreenWidth;
+        settings3DS.StretchWidth = screenSettings.GameScreenWidth  * 2;
         settings3DS.StretchHeight = SCREEN_HEIGHT;
         settings3DS.CropPixels = 8;
     }
@@ -762,7 +762,7 @@ bool settingsUpdateAllSettings(bool updateGameSettings = true)
     }
     else if (settings3DS.ScreenStretch == 6) // TV Style
     {
-        settings3DS.StretchWidth = 292;       
+        settings3DS.StretchWidth = 292 * 2;       
         settings3DS.StretchHeight = -1;
         settings3DS.CropPixels = 0;
     }
