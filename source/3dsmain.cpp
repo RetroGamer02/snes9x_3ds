@@ -738,7 +738,7 @@ bool settingsUpdateAllSettings(bool updateGameSettings = true)
     }
     else if (settings3DS.ScreenStretch == 2) // Fullscreen
     {
-        settings3DS.StretchWidth = screenSettings.GameScreenWidth  * 2;
+        settings3DS.StretchWidth = screenSettings.GameScreenWidth;
         settings3DS.StretchHeight = SCREEN_HEIGHT;
         settings3DS.CropPixels = 0;
     }
@@ -750,7 +750,7 @@ bool settingsUpdateAllSettings(bool updateGameSettings = true)
     }
     else if (settings3DS.ScreenStretch == 4) // Cropeed Fullscreen
     {
-        settings3DS.StretchWidth = screenSettings.GameScreenWidth  * 2;
+        settings3DS.StretchWidth = screenSettings.GameScreenWidth;
         settings3DS.StretchHeight = SCREEN_HEIGHT;
         settings3DS.CropPixels = 8;
     }

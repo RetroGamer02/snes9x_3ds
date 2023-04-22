@@ -441,6 +441,7 @@ bool gpu3dsInitialize()
     GPU3DS.screenFormat = GSP_RGBA8_OES;
     gfxInit(GPU3DS.screenFormat, GPU3DS.screenFormat, false);
 	gfxSet3D(false);
+    gfxSetWide(true);
     APT_CheckNew3DS(&GPU3DS.isNew3DS);
 
     // Create the frame and depth buffers for the main screen.
@@ -486,7 +487,7 @@ bool gpu3dsInitialize()
     // screens
     //
 	matrix3dsInitOrthographic(GPU3DS.projectionTopScreen,
-        0.0f, 400.0f, 0.0f, 240.0f, 0.0f, 1.0f);
+        0.0f, 800.0f, 0.0f, 240.0f, 0.0f, 1.0f);
 	matrix3dsInitOrthographic(GPU3DS.projectionBottomScreen,
         0.0f, 320.0f, 0.0f, 240.0f, 0.0f, 1.0f);
 
